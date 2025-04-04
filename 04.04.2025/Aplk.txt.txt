@@ -1,0 +1,138 @@
+<div class="descendants" style="width:300px">div (current element)
+    <p>p (child)
+        <span>span (grandchild)</span>
+    </p>
+    <p>p (child)
+        <span>span (grandchild)</span>
+    </p>
+</div>
+
+====================================================================================================
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potomkowie - children()</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function($){
+            $("div").children().css({
+                "color": "red",
+                "border": "2px solid red"
+            });
+        });
+    </script>
+    <style>
+        .descendants * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="descendants">
+        div (current element)
+        <p>p (child)
+            <span>span (grandchild)</span>
+        </p>
+        <p>p (child)
+            <span>span (grandchild)</span>
+        </p>
+    </div>
+</body>
+</html>
+=====================================================================================================
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(function($){
+        $("div").children().css({
+            "color": "red",
+            "border": "2px solid red"
+        });
+    });
+</script>
+
+<style>
+    .descendants * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+
+<div class="descendants" style="width:300px">div (current element)
+    <p>p (child)
+        <span>span (grandchild)</span>
+    </p>
+    <p>p (child)
+        <span>span (grandchild)</span>
+    </p>
+</div>
+=======================================================================================================
+<script src="jquery.min.js"></script>
+
+<script>
+    $(function($){
+        $("div").find("span").css({
+            "color": "red",
+            "border": "2px solid red"
+        });
+    });
+</script>
+
+<style>
+    .descendants * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+
+<body class="siblings">
+    <div>div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+</body>
+
+============================================================================================================================
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(function($){
+        $("h2").siblings().css({"color": "red",
+                                "border": "2px solid red"});
+    });
+</script>
+
+<style>
+    .siblings * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+<body class="siblings">
+    <div>div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+</body>
+
